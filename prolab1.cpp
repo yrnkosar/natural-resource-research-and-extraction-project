@@ -33,7 +33,7 @@ size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
     char* data = (char*)contents;
     printf("%.*s", real_size, data);
     char* user_data = (char*)userp;
-	strncat(user_data, data, real_size);
+    strncat(user_data, data, real_size);
     return real_size;
 }
 int main(void) {
@@ -41,7 +41,7 @@ int main(void) {
     
     int birimPlatformMaliyeti;
     
-	CURL* curl;
+    CURL* curl;
     CURLcode res;
 
     char user_data[1000];
@@ -122,14 +122,14 @@ int main(void) {
                                polygon_vertices[polygon_count] = j - i;
                                polygon_count++;
                             }  
-                           // printf("cokgen %d: %d kose\n", polygon_count, j - i);
+                            // printf("cokgen %d: %d kose\n", polygon_count, j - i);
                             i = j;
                             break;
                         }
                     }
                 }
                 //printf("Toplam cokgen sayisi: %d\n", polygon_count);
-	            int sekil = polygon_count;
+	        int sekil = polygon_count;
 	            
                 int num_sonuc_dizi = index * 2;
                 int sonuc_dizi[num_sonuc_dizi];
@@ -141,10 +141,10 @@ int main(void) {
                 }
                 printf("dizinin elemanlari: ");
                 for(int i=0; i < index * 2; i++){
-	         	    printf("%d ",sonuc_dizi[i]);
-	            } 	          	
+	            printf("%d ",sonuc_dizi[i]);
+	        } 	          	
 				
-	            int olcek_sonuc_dizi[num_sonuc_dizi];
+	        int olcek_sonuc_dizi[num_sonuc_dizi];
                 for(int i = 0; i < num_sonuc_dizi; i++) {
                     olcek_sonuc_dizi[i] = sonuc_dizi[i] * 10;
                 }
@@ -153,38 +153,38 @@ int main(void) {
                 int gd = DETECT, gm;
                 initgraph(&gd, &gm, "C:\\Dev-Cpp\\BGI");
                
-			    if(sekil==1){
-			       setcolor(RED);
+		if(sekil==1){
+		   setcolor(RED);
                    setfillstyle(SOLID_FILL, LIGHTCYAN);
                    fillpoly(polygon_vertices[0], olcek_sonuc_dizi);
                    cizilenKareler(10);
-			    }
-			    else if(sekil==2){ 
-			       setcolor(RED);
+		}
+		else if(sekil==2){ 
+		   setcolor(RED);
                    setfillstyle(SOLID_FILL, LIGHTCYAN);
                    fillpoly(polygon_vertices[0], olcek_sonuc_dizi);
                    
-                   // Ýkinci þekli ekranda gösterin
+                   // Ãkinci Ã¾ekli ekranda gÃ¶sterin
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, LIGHTMAGENTA);
                    fillpoly(polygon_vertices[1], olcek_sonuc_dizi+polygon_vertices[0]*2+2); 
                    cizilenKareler(10);
-			    }
-		        else if(sekil==3){
+		}
+		else if(sekil==3){
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, LIGHTCYAN);
                    fillpoly(polygon_vertices[0], olcek_sonuc_dizi);
     
-                   // Ýkinci þekli ekranda gösterin
+                   // Ãkinci Ã¾ekli ekranda gÃ¶sterin
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, LIGHTMAGENTA);
                    fillpoly(polygon_vertices[1], olcek_sonuc_dizi+polygon_vertices[0]*2+2); 
                
-                   // ucuncu þekli ekranda gösterin
+                   // ucuncu Ã¾ekli ekranda gÃ¶sterin
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, YELLOW);
                    fillpoly(polygon_vertices[2], olcek_sonuc_dizi+polygon_vertices[0]*2+polygon_vertices[1]*2+4);
-				   cizilenKareler(10);
+		   cizilenKareler(10);
                 }
                	
                 double alan = matematikselAlan(sonuc_dizi, num_sonuc_dizi);
@@ -201,64 +201,64 @@ int main(void) {
                 initgraph(&gd, &gm, "");
                 
                 if(sekil==1){
-			       setcolor(RED);
+		   setcolor(RED);
                    setfillstyle(SOLID_FILL, GREEN);
                    fillpoly(polygon_vertices[0], olcek_sonuc_dizi);
                    cizilenKareler(10);
-			    }
-			    else if(sekil==2){ 
-			       setcolor(RED);
+		}
+		else if(sekil==2){ 
+		   setcolor(RED);
                    setfillstyle(SOLID_FILL, GREEN);
                    fillpoly(polygon_vertices[0], olcek_sonuc_dizi);
                    
-                   // Ýkinci þekli ekranda gösterin
+                   // Ãkinci Ã¾ekli ekranda gÃ¶sterin
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, GREEN);
                    fillpoly(polygon_vertices[1], olcek_sonuc_dizi+polygon_vertices[0]*2+2); 
                    cizilenKareler(10);
-			    }
-		        else if(sekil==3){
+		}
+		else if(sekil==3){
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, GREEN);
                    fillpoly(polygon_vertices[0], olcek_sonuc_dizi);
     
-                   // Ýkinci þekli ekranda gösterin
+                   // Ãkinci Ã¾ekli ekranda gÃ¶sterin
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, GREEN);
                    fillpoly(polygon_vertices[1], olcek_sonuc_dizi+polygon_vertices[0]*2+2); 
                
-                   // ucuncu þekli ekranda gösterin
+                   // ucuncu Ã¾ekli ekranda gÃ¶sterin
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, GREEN);
                    fillpoly(polygon_vertices[2], olcek_sonuc_dizi+polygon_vertices[0]*2+polygon_vertices[1]*2+4);
-				   cizilenKareler(10);
+		   cizilenKareler(10);
                 }
                 
                 int num_points = index;
                 int x10[index];
                 for(int i=0; i <= index; i++){
                     x10[i]=x_values[i]*10;
-	            } 
-	            int y10[index];
+	        } 
+	        int y10[index];
                 for(int i=0; i <= index; i++){
                     y10[i] = y_values[i]*10;
-	            } 
+	        } 
                 int minX = x10[0];
                 int maxX = x10[0];
                 int minY = y10[0];
                 int maxY = y10[0];
                 for (int i = 1; i < num_points; i++) {
                     if (x10[i] < minX) 
-					    minX = x10[i];
+			minX = x10[i];
                     if (x10[i] > maxX) 
-					    maxX = x10[i];
+			maxX = x10[i];
                     if (y10[i] < minY) 
-					    minY = y10[i];
+			minY = y10[i];
                     if (y10[i] > maxY) 
-					    maxY = y10[i];
+			maxY = y10[i];
                 } 
                 //printf("%d %d %d %d\n",minX,maxX,minY,maxY);
-				int kareBoyutu = 10;
+		int kareBoyutu = 10;
                 int boyaliKareler = 0;
               
                 for (int xCoord = minX; xCoord <= maxX+1; xCoord += kareBoyutu) {
@@ -267,17 +267,17 @@ int main(void) {
                         line(minX, yCoord, maxX, yCoord);
                         
                         for(int i=0; i<=10; i+=1){
-                        	for(int j=0; j<=10; j+=1){
-                        		if (getpixel(xCoord +i , yCoord +j) == GREEN) { 
+                            for(int j=0; j<=10; j+=1){
+                        	if (getpixel(xCoord +i , yCoord +j) == GREEN) { 
                                     setfillstyle(SOLID_FILL, BLUE); 
                                     bar(xCoord , yCoord, xCoord +  kareBoyutu, yCoord + kareBoyutu );
                                 } 
-							}
-						}
-			        }
-			    }
-				int blueCount = 0;
-		        for (int x = 0; x < maxX; x++) {
+			    }			
+		        }
+		    }
+		}
+		int blueCount = 0;
+		for (int x = 0; x < maxX; x++) {
                     for (int y = 0; y < maxY; y++) {
                         int left = x * kareBoyutu;
                         int top = y * kareBoyutu;
@@ -289,12 +289,12 @@ int main(void) {
                         }
                     }
                 }         
-				printf("Maviye boyanan kare sayisi: %d\n", blueCount);
+		printf("Maviye boyanan kare sayisi: %d\n", blueCount);
                 
                 int totalKare = blueCount;
                 
                 jump:
-				printf("\nSondaj Maliyeti Giriniz (1 ile 10 arasinda bir deger olmalidir): ");
+		printf("\nSondaj Maliyeti Giriniz (1 ile 10 arasinda bir deger olmalidir): ");
                 scanf("%d", &birimSondajMaliyeti);
                 if (birimSondajMaliyeti < 1 || birimSondajMaliyeti > 10)
                     goto jump;
@@ -327,15 +327,15 @@ int main(void) {
                 printf("8x8   Platform Sayisi:  %d\n", platform8x8);
                 printf("16x16 Platform Sayisi:  %d\n\n", platform16x16);
                 
-	            printf("Toplam Platform Sayisi  : %d\n", toplamPlatform);
+	        printf("Toplam Platform Sayisi  : %d\n", toplamPlatform);
 	            
                 int toplam_sondaj_maliyeti = birimSondajMaliyeti * top_plat_alan; 
-			    printf("Toplam Sondaj Maliyeti  : %d\n",toplam_sondaj_maliyeti);
+		printf("Toplam Sondaj Maliyeti  : %d\n",toplam_sondaj_maliyeti);
 			    
-			    int toplam_platform_maliyeti = toplamPlatform * birimPlatformMaliyeti;			   
-			    printf("Toplam Platform Maliyeti: %d\n",toplam_platform_maliyeti);
+		int toplam_platform_maliyeti = toplamPlatform * birimPlatformMaliyeti;			   
+		printf("Toplam Platform Maliyeti: %d\n",toplam_platform_maliyeti);
 			    
-			    int toplam_maliyet = toplam_sondaj_maliyeti + toplam_platform_maliyeti;
+		int toplam_maliyet = toplam_sondaj_maliyeti + toplam_platform_maliyeti;
                 printf("Toplam Maliyet          : %d\n",toplam_maliyet);
                 
                 int kar_miktari = rezerv_degeri - toplam_maliyet;
@@ -345,11 +345,11 @@ int main(void) {
                 getch();
                 closegraph();
             } 
-			else {
+	    else {
                 printf("Gecersiz secim. Lutfen tekrar girin.\n");
             }
         } 
-		else {
+	else {
             printf("Veri islenemedi.\n");
         }
     }
