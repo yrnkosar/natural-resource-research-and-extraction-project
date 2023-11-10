@@ -164,7 +164,7 @@ int main(void) {
                    setfillstyle(SOLID_FILL, LIGHTCYAN);
                    fillpoly(polygon_vertices[0], olcek_sonuc_dizi);
                    
-                   // Ýkinci þekli ekranda gösterin
+                   // Ikinci sekli ekranda gösterin
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, LIGHTMAGENTA);
                    fillpoly(polygon_vertices[1], olcek_sonuc_dizi+polygon_vertices[0]*2+2); 
@@ -175,12 +175,12 @@ int main(void) {
                    setfillstyle(SOLID_FILL, LIGHTCYAN);
                    fillpoly(polygon_vertices[0], olcek_sonuc_dizi);
     
-                   // Ýkinci þekli ekranda gösterin
+                   // Ikinci sekli ekranda gösterin
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, LIGHTMAGENTA);
                    fillpoly(polygon_vertices[1], olcek_sonuc_dizi+polygon_vertices[0]*2+2); 
                
-                   // ucuncu þekli ekranda gösterin
+                   // ucuncu sekli ekranda gösterin
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, YELLOW);
                    fillpoly(polygon_vertices[2], olcek_sonuc_dizi+polygon_vertices[0]*2+polygon_vertices[1]*2+4);
@@ -222,12 +222,10 @@ int main(void) {
                    setfillstyle(SOLID_FILL, GREEN);
                    fillpoly(polygon_vertices[0], olcek_sonuc_dizi);
     
-                   // Ýkinci þekli ekranda gösterin
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, GREEN);
                    fillpoly(polygon_vertices[1], olcek_sonuc_dizi+polygon_vertices[0]*2+2); 
                
-                   // ucuncu þekli ekranda gösterin
                    setcolor(RED);
                    setfillstyle(SOLID_FILL, GREEN);
                    fillpoly(polygon_vertices[2], olcek_sonuc_dizi+polygon_vertices[0]*2+polygon_vertices[1]*2+4);
